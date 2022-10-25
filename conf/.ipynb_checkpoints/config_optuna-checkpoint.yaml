@@ -1,0 +1,24 @@
+# common data
+data_path: ${hydra:runtime.cwd}/data
+width: 224
+height: 224
+batch_size_train: 32
+batch_size_val: 256
+# train
+train_workers: 16
+max_epochs: 20
+
+
+# logger
+version: 'optuna_xresnet50'
+
+
+
+# optuna
+workers: 4
+total_trials: 1000
+study_name: 'optuna_xresnet50'
+
+hydra:
+  run:
+    dir: 'outputs/optuna_xresnet50'
